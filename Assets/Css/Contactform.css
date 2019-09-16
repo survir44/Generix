@@ -1,0 +1,101 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: peachpuff;
+    font-family: sans-serif;
+}
+body sup{
+    color:red;
+    font-size: 16px;
+}
+.contact-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:35%;
+    background-image: url("../Images/contactbackground.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.81;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.9);
+}
+
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15%;
+    opacity: 1; 
+}
+
+#contact-us{
+    color: white;
+    
+    font-size: 60px;
+    font-weight:350;
+    margin: 10px;
+}
+
+#contact-us1{
+    margin: 0;
+    color: white;
+    margin: 10px;
+}
+
+.contact-name{
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+
+}
+.contact-name label{
+    margin-right: auto;
+    color: white;
+    font-size: 14px;
+}
+.contact-name input{
+    padding: 6px;
+    font-size: 20px;
+    border-radius:5px; 
+}
+.contact-email{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.contact-email label{
+    margin-right: auto;
+    color: white;
+    font-size: 14px;
+}
+.contact-email input{
+    padding: 6px;
+    font-size: 20px;
+    border-radius:5px; 
+}
+
+.contact-form button{
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(11, 77, 165, 0.74);
+    color: white;
+    border: 1px dotted black
+}
+.contact-comment{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.contact-comment label{
+    margin-right: auto;
+    color: white;
+    font-size: 14px;
+}
+.contact-comment textarea{
+    padding: 6px;
+    font-size: 20px;
+    border-radius:5px; 
+}

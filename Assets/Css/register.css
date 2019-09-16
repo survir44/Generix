@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color:peachpuff;
+}
+
+body sup{
+    color: red;
+    font-size:18px; 
+}
+
+#txt{
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.register-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4)
+}
+#register-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15%;
+    text-align: center;
+    z-index: 10;
+}
+.register-cont{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.register-cont label{
+    margin-right:auto;
+    font-weight: bold;
+    font-size: 16px; 
+}
+.register-cont input{
+    padding: 6px;
+    font-size: 20px;
+    border-radius:5px; 
+}
+.register-cont select{
+    padding: 6px;
+    font-size: 20px;
+    border-radius:5px;
+}
+#but{
+    margin:20px;
+    margin-left: auto;
+    padding : 10px 20px;
+    font-size: 18px;
+    background-color: rgba(45, 158, 158, 0.9);
+    border-radius: 5px;
+}
