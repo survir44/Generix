@@ -1,7 +1,13 @@
+html{
+    height:100%;
+}
+
 body{
+    margin:0;
     padding: 0;
-    margin: 0;
-    background-color: peachpuff;
+    background-image: linear-gradient(grey,white);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: sans-serif;
 }
 body sup{
