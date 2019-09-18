@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="center">
+            <img src="y.png" width="90" height="90" style="float: left;">
+            <a  href="login.html" onclick="alert('Do You Want To Logout');"><input type="button" value="Logout" style="float: right;"></a><br><br>
+            <p align="right"><b>Welcome SAURABH KUMAR YADAV</b></p>
+                    
+            <div class="container">
+                <div class="box">
+                    <div class="dropdown"><button class="dropbtn"><a style="text-decoration: none; color: white;" href="dashboard.html">Dashboard</a></button></div>
+                </div>
+                <div class="box">
+                    <div class="dropdown">
+                            <div class="dropdown"><button class="dropbtn"><a style="text-decoration: none; color: white;" href="profile.html">Profile</a></button></div>
+                    </div>
+                </div>
+                <div class="box">
+                        <div class="dropdown">
+                            <button class="dropbtn">Order</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Buy</a>
+                                    <a href="#">Sell</a>
+                                    <a href="#">Help</a>
+                                </div>
+                        </div>
+                </div>
+                <div class="box">
+                    <div class="dropdown">
+                            <button class="dropbtn">FAQ</button>
+                    </div>
+                </div>
+            </div><br><br>
+            <h1><b>FAQ</b></h1><hr><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+                </div><br><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+            </div><br><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+            </div><br><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+            </div><br><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+            </div><br><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+            </div><br><br>
+            <button class="accordion"><b>Section 1</b></button>
+                <div class="panel">
+                <p>Hello World.</p>
+            </div><br><br>
+        </div>
+            
+    
+    </body>
+    <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+    </script>
+</html>
