@@ -1,0 +1,41 @@
+html{
+    height:100%;
+}
+body{
+    background-image: linear-gradient(grey,white);
+}
+.center{
+    margin: auto;
+    background-color: white;
+    width:60%;
+    border: 2px solid grey;
+    color: black;
+    padding: 10px;
+}
+div.container{
+    width: 100%;
+    border: 2px;
+}
+.accordion{
+    background-color: rgb(59, 91, 230);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 2px solid grey;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+}
+.active,.accordion:hover{
+    background-color: lightcoral; 
+}
+.panel{
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    border: solid grey;
+    overflow: hidden;
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0,0.2);;
+}
