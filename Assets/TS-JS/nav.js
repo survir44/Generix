@@ -1,6 +1,5 @@
 document.getElementById('login__button').addEventListener('click', function () {
     location.href = "/home/winston/Desktop/Generix/Generix/login.html";
-    document.getElementById('login-content').style.display = "inline-block";
 });
 document.getElementById("register__button").addEventListener('click', function () {
     location.href = "/home/winston/Desktop/Generix/Generix/register.html";

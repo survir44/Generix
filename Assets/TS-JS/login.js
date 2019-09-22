@@ -20,7 +20,7 @@ document.getElementById('login-btn').addEventListener('click', function () {
             if (this.status == 200) {
                 message = JSON.parse(this.responseText);
                 alert(message.message);
-                window.location.href = "index.html";
+                location.href = "dashboard.html";
             }
             else if (this.status == 400) {
                 message = JSON.parse(this.responseText);
