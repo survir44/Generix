@@ -2,45 +2,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" >
-    <title>Generix</title>
-     <style>
-      .main-content{
-        width: 60%;
-        margin: 40px auto;
-        overflow: auto;
-      }
-      .inner-content{
-        float: left;
-        position: relative;
-        overflow: hidden;
-        padding: 3px;
-        border:1px solid grey;
-      }
-      .inner-content img{
-        display: none;
-        width: 100%;
-        height: 600px;
-      }
-      .inner-content img.active-img{
-        display: inline-block
-      }
-      .prev,.next{
-        float: left;
-        margin-top: 300px;
-        cursor: pointer;
-      }
-      .prev{
-        position: relative;
-        margin-right: -45px;
-        z-index: 100;
-      }
-      .next{
-        position: relative;
-        margin-left: -45px;
-        z-index: 100;
-      }
-    </style> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Assets/Css/Home.css">
+    <title>Generix</title> 
   </head>
   <body>
     <div id="some"></div>
@@ -51,10 +15,11 @@
             <img src="Assets/Images/imagesforslider/image1.jpg" class="active-img">
             <img src="Assets/Images/imagesforslider/image2.jpg" >
             <img src="Assets/Images/imagesforslider/image3.jpg">
-            <img src="Assets/Images/imagesforslider/image4.jpg" c>
+            <img src="Assets/Images/imagesforslider/image4.jpg" >
         </div>
         <img src="Assets/Images/imagesforslider/arrow-right.png" alt="Prev image" class="next">
       </div>
+
     </div>
 </html>
 <script src="Assets/TS-JS/JQuery.js"></script>
