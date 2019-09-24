@@ -31,7 +31,7 @@ div.container{
 }
 .active,.accordion:hover{
     background-color: grey;
-    color: white; 
+    color: black; 
 }
 .panel{
     padding: 0 18px;
