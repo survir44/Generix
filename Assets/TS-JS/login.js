@@ -1,14 +1,22 @@
-document.getElementById('login-btn').addEventListener('click', function () {
+function getAlert(typ,status,message){
+    Swal.fire({
+        type: typ,
+        title: status,
+        text: message
+      })
+}
+    document.getElementById('login-btn').addEventListener('click', function () {
     var name1 = document.getElementById('name').value;
     var pass1 = document.getElementById('pass').value;
-    if (name1 == "" && pass1 == "") {
-        alert("Error : Username and Password is empty");
+    if (name1 == "" && pass1 == "") {        
+        getAlert("error","Error","Username field and Password Fields are empty")
     }
     else if (name1 == "") {
-        alert("Error : Username is empty");
+        getAlert("error","Error","Username field is empty")
+   
     }
     else if (pass1 == "") {
-        alert("Error : Password is empty");
+        getAlert("error","Error","Password field is empty")
     }
     else {
         var message;
@@ -19,19 +27,25 @@ document.getElementById('login-btn').addEventListener('click', function () {
         xhr.onload = function () {
             if (this.status == 200) {
                 message = JSON.parse(this.responseText);
-                alert(message.message);
-                location.href = "dashboard.html";
+                getAlert(message.status, message.status.charAt(0).toUpperCase() + message.status.slice(1),message.message)
+                document.cookie="username="+name1+";";
+                setTimeout(function(){
+                    location="index.html"
+                },1500)
+                
             }
             else if (this.status == 400) {
                 message = JSON.parse(this.responseText);
-                alert(message.message);
+                getAlert(message.status, message.status.charAt(0).toUpperCase() + message.status.slice(1),message.message)
             }
             else {
-                alert("incorrect request");
+                getAlert("error","Error","Some error")
             }
         };
-        xhr.send(JSON.stringify({ _id: name1, password: pass1 }));
-        document.getElementById('login-content').style.display = "none";
+        xhr.onerror=function(){
+            getAlert('info',"","Check your network or try again later")
+        }
+        xhr.send(JSON.stringify({ username: name1, password: pass1 }));
         document.getElementById('name').value = "";
         document.getElementById('pass').value = "";
     }

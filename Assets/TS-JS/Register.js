@@ -5,12 +5,30 @@ var Info = /** @class */ (function () {
         this.password = pass;
     }
     Info.prototype.sendDataToRegisterApi = function () {
+        var message;
         var url = "http://localhost:8080/register";
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({ _id: this.username, password: this.password, email_id: this.email }));
-        alert({ "Successfull": "Registerd Successfull" });
+        xhr.onload = function () {
+            if (this.status == 200) {
+                message = JSON.parse(this.responseText);
+                getAlert(message.status, message.status.charAt(0).toUpperCase() + message.status.slice(1),message.message)
+                
+            }
+            else if (this.status == 400) { 
+                message = JSON.parse(this.responseText);
+                getAlert(message.status, message.status.charAt(0).toUpperCase() + message.status.slice(1),message.message)
+               
+            }
+            else {
+                getAlert("error","Error","Some error")
+            }
+        };
+        xhr.onerror=function(){
+            getAlert('info',"","Check your network or try again later")
+        }
+        xhr.send(JSON.stringify({ username: this.username, password: this.password, email_id: this.email }));
     };
     Info.prototype.emptyFields = function () {
         document.getElementById('name').value = "";
@@ -33,40 +51,48 @@ document.getElementById('but').addEventListener('click', function () {
         data.emptyFields();
     }
 });
+
+function getAlert(typ,status,message){
+    Swal.fire({
+        type: typ,
+        title: status,
+        text: message
+      })
+}
 function validate(name, email, pass, conpass, data) {
     if (name == "") {
-        alert("Error : username field is empty");
+        getAlert("error","Error","Username field is empty")
         return false;
     }
     if (email == "") {
-        alert("Error : email field is empty");
+        getAlert("error","Error","Email field is empty")
         return false;
     }
     if (pass == "") {
-        alert("Error : password field is empty");
+        getAlert("error","Error","Password field is empty")
         return false;
     }
     if (conpass == "") {
-        alert("Error : confirm password field is empty");
+        getAlert("error","Error","Confirm password field is empty")
         return false;
     }
     if (name.length < 5 || name.length > 12) {
-        alert("Error : The text in username field must have length between 5 to 12 characters");
+        getAlert("error","Error","The text in username field must have length between 5 to 12 characters")
         data.emptyFields();
         return false;
     }
     if (pass.length < 5 || pass.length > 12) {
-        alert("Error : The text in password fields must have length between 5 to 12 characters");
+        getAlert("error","Error","The text in password field must have length between 5 to 12 characters")
         data.emptyFields();
         return false;
     }
     if (conpass.length < 5 || conpass.length > 12) {
-        alert("Error : The text in confirm password fields must have length between 5 to 12 characters");
+        getAlert("error","Error","The text in confirm-password field must have length between 5 to 12 characters")
         data.emptyFields();
         return false;
     }
     if (pass != conpass) {
-        alert("Error :Password fields do not match each other");
+        getAlert("error","Error","Password and Confirm password do not match each other")
         document.getElementById('pass').value = "";
         document.getElementById('conpass').value = "";
         return false;
