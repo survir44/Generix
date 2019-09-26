@@ -1,0 +1,45 @@
+body{
+    background-image: linear-gradient(grey,white);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.center{
+    margin: auto;
+    background-color: whitesmoke;
+    width:60%;
+    color: black;
+    border: 0.3px solid grey;
+    padding: 10px;
+}
+div.box{
+    box-sizing: border-box;
+    width: 25%;
+    height: 75px;
+    border: 1.5px solid black; 
+    background-color: black; 
+    float: left;
+    text-align:center;
+    font-size: 45px;
+}
+.dropbtn{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover{
+    color: grey;
+}
+div.tool{
+    width: 100%;
+    height: 600px;
+    background-color: whitesmoke;
+}
+.cont{
+    width:98%;
+    border: 0.3px solid grey;
+    background-color: whitesmoke;
+    padding: 10px;
+}
