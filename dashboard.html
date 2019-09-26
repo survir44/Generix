@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
+    </head>
+    <body>
+        <div class="center">
+            <div class="box">
+                <button id="dashboard" class="dropbtn"><a style="text-decoration: none; color: white;" href="dashboard.html">Dashboard</a></button>
+            </div>
+            <div class="box">
+                <div class="dropdown">
+                        <div class="dropdown"><button class="dropbtn"><a style="text-decoration: none; color: white;" href="profile.html">Profile</a></button></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="dropdown">
+                        <div class="dropdown"><button class="dropbtn"><a style="text-decoration: none; color: white;" href="#">Order</a></button></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="dropdown"><button class="dropbtn"><a style="text-decoration: none; color: white;" href="login.html">Logout</a></button></div>
+            </div>
+            <br><br><br>
+            <div style="float: right">
+                <p id="name" style="font-weight: bold;"></p>
+            </div><br>
+            <h2>My Dashboard</h2>
+            <div class="tool">
+                <div class="cont">
+                    <div class="cont" style="float: right; width: 150px; height:150px; border:none">
+                        <img src="Photo.jpg" width="150px" height="150px">
+                    </div><br>
+                    Account Information &nbsp<a href="profile.html">Edit</a><br><br>
+                    <p id="name1"></p><br>
+                    <p id="email"></p><br><hr><br>
+                    Change Password &nbsp<a href="password.html">Edit</a><br><br><br><hr><br>
+                    Communication Particular &nbsp<a href="profile.html">Edit</a><br><br>
+                </div>
+            </div>
+        </div> 
+    </body>
+    <script type="text/javascript">
+            var message;
+            var xhr=new XMLHttpRequest();
+            var url="http://localhost:8080/dashboard";
+            xhr.open("POST",url);
+            xhr.setRequestHeader('Content-Type','application/json');
+            xhr.onload=function(){
+                if(this.status==200){
+                    message=JSON.parse(this.responseText);
+                    //alert(typeof(message.name));
+                    document.getElementById("name").innerHTML="Welcome "+message.name;
+                    document.getElementById("name1").innerHTML="Name:"+message.name;
+                    document.getElementById("email").innerHTML="Email:"+message.email;
+                }
+                else if(this.status==400){
+                    alert("Error");
+                }
+                else{
+                    alert("Invalid Request");
+                }
+            };
+            xhr.send(JSON.stringify({"id":"100rabh_yadav98"}));
+    </script>
+</html>
