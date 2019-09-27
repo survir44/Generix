@@ -2,6 +2,9 @@ function submit(){
     var current=document.getElementById('current').value;
     var pass=document.getElementById('pass').value;
     var confirm=document.getElementById('confirm').value;
+    if(current=="" || pass=="" || confirm==""){
+        alert("Password Field Cannot Be Empty");
+    }
     if(pass!=confirm){
         alert("Password Does not match");
     }
