@@ -2,10 +2,10 @@ document.getElementById('login__button').addEventListener('click', function () {
     if (document.getElementById('login__button').innerHTML == "Sign out") {
         document.cookie = "username= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
         document.getElementById('login__button').innerHTML == "Sign-in";
-        location.href = "/home/winston/Desktop/Generix/Generix/login.html";
+        location.href = "login.html";
     }
     else {
-        location.href = "/home/winston/Desktop/Generix/Generix/login.html";
+        location.href = "login.html";
     }
 });
 document.getElementById("register__button").addEventListener('click', function () {
@@ -13,7 +13,7 @@ document.getElementById("register__button").addEventListener('click', function (
     }
     else
         [
-            location.href = "/home/winston/Desktop/Generix/Generix/register.html"
+            location.href = "register.html"
         ];
 });
 var x = document.cookie;
