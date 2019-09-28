@@ -62,6 +62,9 @@
                     alert("Invalid Request");
                 }
             };
+            xhr.onerror=function(){
+                alert('check your network')
+            }
             xhr.send(JSON.stringify({"id":"100rabh_yadav98"}));
     </script>
 </html>

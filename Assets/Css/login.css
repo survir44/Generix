@@ -1,68 +1,95 @@
+
 .login-div{
   position: absolute;
-  top:50%;left:50%;transform: translate(-50%,-50%);
   display: flex;
   flex-direction: column;
-  width: 22%;
-  text-align: center
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  border-radius: 5;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 8px 8px rgba(0,0,0,0.4)
 }
 
 .login-image{
-  border: 1px solid grey; 
-  color: black;
-  background-color: white;
-  border: 1px grey solid;
+  display: inline;
+  text-align: left;
+  color: white;
   margin: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 2px rgb(0, 0, 0,0.2);
-  font-size: 13px;
+  margin-right:auto 
+}
+
+.login-image p{
+  font-size: 35px;
+  padding :2px 5px;
+  border-bottom: 8px solid orange;
 }
 .login-main{
   display: flex;
   flex-direction: column;
-  background-color: white;
-  border: 1px grey solid;
   margin: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 2px rgb(0, 0, 0,0.2);
+  background-color: none;
 }
-.login-main label{
+.txtbox,.txtbox1{
+  border-bottom: 2px solid orange;
+  margin: 15px;
+}
+.txtbox span,.txtbox1 span{
+  font-family: fontAwesome;
+  font-size: 17px;
+  color: black;
+
+}
+.txtbox input,.txtbox1 input{
+  border: none;
+  background :none;
+  font-size: 20px;
+  padding: 8px 5px;
+  width:90%;
+  color:white;
+}
+
+.txtbox input::placeholder,.txtbox1 input::placeholder{
+  color:orange;
+  opacity: 1;
+}
+
+.login-main a{
   margin: 0 15px;
   margin-top: 20px;
   margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 14px;
-}
-.login-main input{
-  padding: 5px 5px;
-  margin: 0px 15px;
-}
-
-.login-main label{
+  font-size: 16px;
   margin-right: auto;
+
 }
 a:visited{
   color: blue;
 }
 
 #login-btn{
-  background-color:rgb(33, 195, 54);
-  margin: 20px 15px;
+  background-color:black;
+  margin: 0px 15px;
+  margin-top: 5px;
+  margin-bottom: 8px;
   color: white;
-  border-radius: 0; 
+  border-radius: 5; 
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+  transition: 0.4s;
+}
+
+#login-btn:hover{
+  transform: scale(1.05,1.05);
+  background: orange;
 }
 
 .login-account{
-  background-color:white;
   padding: 2px 0;
   margin: 10px;
-  margin-top: 10px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 2px rgb(0, 0, 0,0.2);
-
+  margin-top: 2px; 
+  color: white; 
 }
-.login-account p{
-  font-size:14px; 
+.rdm{
+  font-size:17px; 
 }
 

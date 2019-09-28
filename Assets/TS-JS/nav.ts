@@ -17,18 +17,27 @@ document.getElementById("register__button").addEventListener('click',function(){
     ]  
 })
 
+function someCookie(name:String){
+    document.getElementById('login__button').innerHTML="Sign out"
+    document.getElementById('register__button').innerHTML="Welcome "+ name + "!"
+}
+
 var x=document.cookie;
+var check:Boolean=false
 if(x!=null){
-    var ind=x.search('username')
-    if(ind==-1){
+    var dem=x.split(";")
+    for (var i of dem){
+        if(i.search("username") == 0){
+            someCookie(i.substring(i.indexOf('=')+1))
+            check=true
+            break
+        }
+    }
+        
+    if(check==false){
         document.getElementById('login__button').innerHTML="Sign-in"
         document.getElementById('register__button').innerHTML="Sign up"
-    }else{
-        document.getElementById('login__button').innerHTML="Sign out"
-        document.getElementById('register__button').innerHTML="Welcome "+ x.substring(x.indexOf('=')+1) + "!"
     }
-
-    
 }
 else{
     document.getElementById('login__button').innerHTML="Sign-in"

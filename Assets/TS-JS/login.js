@@ -50,3 +50,32 @@ function getAlert(typ,status,message){
         document.getElementById('pass').value = "";
     }
 });
+/* var repeater;
+
+function doWork() {
+    if(document.getElementById('name').value==""){
+        document.getElementById('login-btn').style.backgroundColor="black"
+    }else if(document.getElementById('pass').value==""){
+        document.getElementById('login-btn').style.backgroundColor="black"
+    }
+    else{
+        document.getElementById('login-btn').style.backgroundColor="green"
+    }
+ repeater = setTimeout(doWork, 1000);
+}
+doWork(); */
+
+$("input[type=text]").focus(function(){
+    $(".txtbox").css("border-bottom", "2px solid blue");
+  });
+  $("input[type=password]").focus(function(){
+    $(".txtbox1").css("border-bottom", "2px solid blue");
+  });
+  $("input[type=text]").focusout(function(){
+    $(".txtbox").css("border-bottom", "2px solid orange");
+  });
+  $("input[type=password]").focusout(function(){
+    $(".txtbox1").css("border-bottom", "2px solid orange");
+  });
+
+

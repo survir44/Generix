@@ -20,13 +20,10 @@ body sup{
     font-family: sans-serif;
 }
 .register-container{
-    position: absolute;
     display: flex;
     flex-direction: column;
     width: 40%;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    margin: 10px auto;
     background-color: white;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4)
 }
