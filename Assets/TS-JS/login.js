@@ -72,10 +72,10 @@ $("input[type=text]").focus(function(){
     $(".txtbox1").css("border-bottom", "2px solid blue");
   });
   $("input[type=text]").focusout(function(){
-    $(".txtbox").css("border-bottom", "2px solid orange");
+    $(".txtbox").css("border-bottom", "2px solid black");
   });
   $("input[type=password]").focusout(function(){
-    $(".txtbox1").css("border-bottom", "2px solid orange");
+    $(".txtbox1").css("border-bottom", "2px solid black");
   });
 
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/Css/register.css">
     <title>Document</title>
 </head>
@@ -13,31 +14,35 @@
 <div class="register-container">
     <div id="register-content">
         <div class="register-text">
-                <p id="txt">Create Your Generix Account</p>
-                <p id="txt1">New to Generix?Sign up - It's free and simple!</p>
+                <p id="txt">Register</p>
+<!--                 <p id="txt1">New to Generix?Sign up - It's free and simple!</p>
+ -->        </div>
+        <div class="register-cont">
+            <!-- <label for="name">Username<sup>*</sup></label> -->
+          <span class="far fa-user"></span>
+            <input type="text" id="name"  placeholder="Username">
         </div>
         <div class="register-cont">
-            <label for="name">Username<sup>*</sup></label>
-            <input type="text" id="name"  >
+            <!-- <label for="email">Email-id<sup>*</sup></label> -->
+          <span class="far fa-envelope"></span>
+          <input type="Email" id="email" placeholder="Email-id">
         </div>
         <div class="register-cont">
-            <label for="email">Email-id<sup>*</sup></label>
-            <input type="Email" id="email" >
+            <!-- <label for="pass">Password<sup>*</sup></label>             -->
+          <span class="far fa-lock"></span>
+          <input type="password" id="pass" placeholder="Password">
         </div>
         <div class="register-cont">
-            <label for="pass">Password<sup>*</sup></label>            
-            <input type="password" id="pass" >
-        </div>
-        <div class="register-cont">
-             <label for="pass">Confirm password<sup>*</sup></label>            
-            <input type="password" id="conpass" >
+             <!-- <label for="pass">Confirm password<sup>*</sup></label>             -->
+          <span class="far fa-lock"></span>
+          <input type="password" id="conpass" placeholder="Confirm Password">
         </div>
         <div class="lower" style="text-align: left">
             <input type="checkbox"  id="check" value="Accept" required><label for="check">I have read and agreed to the <a href="#">Generix Terms of Service</a></label>
         </div>
 
     </div>
-    <button  id="but">Next</button>
+    <button  id="but">Register</button>
 </div>
 </body>
 </html>
