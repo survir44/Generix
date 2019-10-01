@@ -1,8 +1,9 @@
 var Info = /** @class */ (function () {
-    function Info(name, email, pass) {
+    function Info(name, email, pass,fullname) {
         this.username = name;
         this.email = email;
         this.password = pass;
+        this.fullname=fullname;
     }
     Info.prototype.sendDataToRegisterApi = function () {
         var message;
@@ -28,7 +29,7 @@ var Info = /** @class */ (function () {
         xhr.onerror=function(){
             getAlert('info',"","Check your network or try again later")
         }
-        xhr.send(JSON.stringify({ username: this.username, password: this.password, email_id: this.email }));
+        xhr.send(JSON.stringify({ username: this.username, password: this.password, email_id: this.email,name:this.fullname }));
     };
     Info.prototype.emptyFields = function () {
         document.getElementById('name').value = "";
@@ -43,10 +44,11 @@ document.getElementById('but').addEventListener('click', function () {
     var email = document.getElementById('email').value;
     var pass = document.getElementById('pass').value;
     var conpass = document.getElementById('conpass').value;
+    var fullname= document.getElementById('fullname').value;
     var data = new Info(name, email, pass);
     var flag = validate(name, email, pass, conpass, data);
     if (flag == true) {
-        var data = new Info(name, email, pass);
+        var data = new Info(name, email, pass,fullname);
         data.sendDataToRegisterApi();
         data.emptyFields();
     }

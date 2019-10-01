@@ -2,8 +2,6 @@ html{
     height:100%;
 }
 
-    
-
 #txt{
     font-size: 35px;
     padding :2px 5px;
@@ -15,14 +13,11 @@ html{
     flex-direction: column;
     width: 25%;
     margin: 10px auto;
-    background-color: ;
+    background-color: none;
     box-shadow: 0 0 8px 8px rgba(0,0,0,0.4);
-
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
-
 }
 #register-content{
     display: flex;
@@ -37,7 +32,7 @@ html{
     margin-right:auto;
 }
 
-.register-cont,.register-cont1,.register-cont2,.register-cont3{
+.register-cont,.register-cont1,.register-cont2,.register-cont3,.register-cont4{
     border: none;
   background :none;
   font-size: 20px;
@@ -48,7 +43,7 @@ html{
 
 }
 
-.register-cont input,.register-cont1 input,.register-cont2 input,.register-cont3 input{
+.register-cont input,.register-cont1 input,.register-cont2 input,.register-cont3 input,.register-cont4 input{
     border: none;
     background :none;
     font-size: 20px;
@@ -57,12 +52,12 @@ html{
     color:black;
 }
 
-.register-cont input::placeholder,.register-cont1 input::placeholder,.register-cont2 input::placeholder,.register-cont3 input::placeholder{
+.register-cont input::placeholder,.register-cont1 input::placeholder,.register-cont2 input::placeholder,.register-cont3 input::placeholder,.register-cont4 input::placeholder{
     color:black;
   opacity: 1;
 }
 
-.register-cont span,.register-cont1 span,.register-cont2 span,.register-cont3 span{
+.register-cont span,.register-cont1 span,.register-cont2 span,.register-cont3 span,.register-cont4 span{
     font-family: fontAwesome;
   font-size: 17px;
   color: black;
