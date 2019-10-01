@@ -37,7 +37,7 @@ html{
     margin-right:auto;
 }
 
-.register-cont{
+.register-cont,.register-cont1,.register-cont2,.register-cont3{
     border: none;
   background :none;
   font-size: 20px;
@@ -48,7 +48,7 @@ html{
 
 }
 
-.register-cont input{
+.register-cont input,.register-cont1 input,.register-cont2 input,.register-cont3 input{
     border: none;
     background :none;
     font-size: 20px;
@@ -57,12 +57,12 @@ html{
     color:black;
 }
 
-.register-cont input::placeholder{
+.register-cont input::placeholder,.register-cont1 input::placeholder,.register-cont2 input::placeholder,.register-cont3 input::placeholder{
     color:black;
   opacity: 1;
 }
 
-.register-cont span{
+.register-cont span,.register-cont1 span,.register-cont2 span,.register-cont3 span{
     font-family: fontAwesome;
   font-size: 17px;
   color: black;

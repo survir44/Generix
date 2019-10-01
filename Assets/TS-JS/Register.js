@@ -99,3 +99,25 @@ function validate(name, email, pass, conpass, data) {
     }
     return true;
 }
+
+$(document).ready(function(){
+    $("input[type=text]").focus(function(){
+        $(".register-cont").css("border-bottom", "2px solid blue");
+    })
+    $("input[type=text]").focusout(function(){
+        $(".register-cont").css("border-bottom", "2px solid grey");
+    })
+    $("input[type=email]").focus(function(){
+        $(".register-cont1").css("border-bottom", "2px solid blue");
+    })
+    $("input[type=email]").focusout(function(){
+        $(".register-cont1").css("border-bottom", "2px solid grey");
+    })
+    $("input[type=password]").focus(function(){
+        $(".register-cont2").css("border-bottom", "2px solid blue");
+    })
+    $("input[type=password").focusout(function(){
+        $(".register-cont2").css("border-bottom", "2px solid grey");
+    })
+
+})
