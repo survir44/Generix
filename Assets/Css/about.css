@@ -1,0 +1,36 @@
+html{
+    height:100%;
+}
+body{
+    background-color: #af8c9d;
+    background-image: linear-gradient(315deg, #af8c9d 0%, #8cacac 74%);
+    background-size: cover;
+    background-repeat: repeat;;
+}
+.center{
+    margin: auto;
+    background-color: whitesmoke;
+    width:60%;
+    color: black;
+    padding: 10px;
+}
+.para{
+    text-align:center;
+    font-weight:bold;
+    font-size:27px;
+}
+.leftbox { 
+    float:left;  
+    width:33%; 
+    height:280px; 
+} 
+.middlebox{ 
+    float:left;   
+    width:33%; 
+    height:280px; 
+} 
+.rightbox{ 
+    float:right; 
+    width:34%; 
+    height:280px; 
+}
