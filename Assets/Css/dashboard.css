@@ -1,7 +1,8 @@
 body{
-    background-image: linear-gradient(grey,white);
-    background-repeat: no-repeat;
+    background-color: #af8c9d;
+    background-image: linear-gradient(315deg, #af8c9d 0%, #8cacac 74%);
     background-size: cover;
+    background-repeat: repeat;
 }
 .center{
     margin: auto;

@@ -29,7 +29,7 @@ var Info = /** @class */ (function () {
         xhr.onerror=function(){
             getAlert('info',"","Check your network or try again later")
         }
-        xhr.send(JSON.stringify({ username: this.username, password: this.password, email_id: this.email,name:this.fullname }));
+        xhr.send(JSON.stringify({ _id: this.username, password: this.password, email: this.email,name:this.fullname }));
     };
     Info.prototype.emptyFields = function () {
         document.getElementById('name').value = "";
