@@ -30,7 +30,7 @@ function getAlert(typ,status,message){
                 getAlert(message.status, message.status.charAt(0).toUpperCase() + message.status.slice(1),message.message)
                 document.cookie="username="+name1+";";
                 setTimeout(function(){
-                    location="index.html"
+                    location="dashboard.html"
                 },1500)
                 
             }

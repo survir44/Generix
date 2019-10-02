@@ -1,3 +1,17 @@
+var x = document.cookie;
+var check = false;
+if (x != null) {
+    var dem = x.split(";");
+    for (var _i = 0, dem_1 = dem; _i < dem_1.length; _i++) {
+        var i = dem_1[_i];
+        if (i.search("username") == 0) {
+            var user=i.substring(i.indexOf('=') + 1);
+            console.log(user);
+            check = true;
+            break;
+        }
+    }
+}
 var message;
 var xhr=new XMLHttpRequest();
 var url="http://localhost:8080/dashboard";
@@ -18,4 +32,8 @@ xhr.onload=function(){
         alert("Invalid Request");
     }
 };
-xhr.send(JSON.stringify({"id":"100rabh_yadav98"}));
+xhr.send(JSON.stringify({"id":user}));
+function logout(){
+    document.cookie = "username= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+    location="login.html";
+}

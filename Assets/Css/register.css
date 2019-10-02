@@ -13,7 +13,7 @@ html{
     flex-direction: column;
     width: 25%;
     margin: 10px auto;
-    background-color: none;
+    background-color: white;
     box-shadow: 0 0 8px 8px rgba(0,0,0,0.4);
     top: 50%;
     left: 50%;
@@ -23,7 +23,7 @@ html{
     display: flex;
     flex-direction: column;
     margin: 10px;
-    background-color: none;
+    background-color: white;
 }
 .register-text{
     display: inline;
