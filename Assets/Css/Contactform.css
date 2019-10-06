@@ -2,24 +2,14 @@ html{
     height:100%;
 }
 
-body{
-    margin:0;
-    padding: 0;
-    background-image: linear-gradient(grey,white);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: sans-serif;
-}
+
 body sup{
     color:red;
     font-size: 16px;
 }
 .contact-background{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width:35%;
+    margin: 10px auto;
+    width:70%;
     background-image: url("../Images/contactbackground.png") ;
     background-repeat: no-repeat;
     background-size: cover;

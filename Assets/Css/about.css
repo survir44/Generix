@@ -8,9 +8,9 @@ body{
     background-repeat: repeat;;
 }
 .center{
-    margin: auto;
+    margin: 25px auto;
     background-color: whitesmoke;
-    width:60%;
+    width:70%;
     color: black;
     padding: 10px;
 }

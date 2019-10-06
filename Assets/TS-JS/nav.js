@@ -1,7 +1,7 @@
 document.getElementById('login__button').addEventListener('click', function () {
-    if (document.getElementById('login__button').innerHTML == "Sign out") {
+    if (document.getElementById('login__button').innerHTML == "Logout") {
         document.cookie = "username= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
-        document.getElementById('login__button').innerHTML == "Sign-in";
+        document.getElementById('login__button').innerHTML == "Login";
         location.href = "login.html";
     }
     else {
@@ -9,7 +9,7 @@ document.getElementById('login__button').addEventListener('click', function () {
     }
 });
 document.getElementById("register__button").addEventListener('click', function () {
-    if (document.getElementById("register__button").innerHTML != "Sign up") {
+    if (document.getElementById("register__button").innerHTML != "Register") {
     }
     else
         [
@@ -17,7 +17,7 @@ document.getElementById("register__button").addEventListener('click', function (
         ];
 });
 function someCookie(name) {
-    document.getElementById('login__button').innerHTML = "Sign out";
+    document.getElementById('login__button').innerHTML = "Logout";
     document.getElementById('register__button').innerHTML = "Welcome " + name + "!";
 }
 var x = document.cookie;
@@ -33,13 +33,13 @@ if (x != null) {
         }
     }
     if (check == false) {
-        document.getElementById('login__button').innerHTML = "Sign-in";
-        document.getElementById('register__button').innerHTML = "Sign up";
+        document.getElementById('login__button').innerHTML = "Login";
+        document.getElementById('register__button').innerHTML = "Register";
     }
 }
 else {
-    document.getElementById('login__button').innerHTML = "Sign-in";
-    document.getElementById('register__button').innerHTML = "Sign up";
+    document.getElementById('login__button').innerHTML = "Login";
+    document.getElementById('register__button').innerHTML = "Register";
 }
 /* var header:HTMLElement=document.getElementById("header__container")
 window.onscroll=function(){

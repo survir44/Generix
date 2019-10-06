@@ -12,8 +12,9 @@ body{
     width:60%;
     color: black;
     padding: 10px;
+    margin-bottom:50px; 
 }
-div.container{
+.container{
     width: 100%;
     border: 2px;
 }
