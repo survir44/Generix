@@ -1,5 +1,5 @@
 
-.main-content{
+/* .main-content{
     width: 60%;
     margin: 40px auto;
     overflow: auto;
@@ -32,80 +32,117 @@
     position: relative;
     margin-left: -45px;
     z-index: 100;
+} */
+/* #slider {
+	overflow: hidden;
+}
+#slider figure {
+	position: relative;
+    width: 300%;
+    height: 300px;
+	margin: 0;
+	left: 0;
+	animation: 10s slider infinite;
+}
+#slider figure img {
+	float: left;
+	width: 20%;
 }
 
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+} */
 
-.footer-ext{
+
+.card{
+	margin: auto;
+	background-color: whitesmoke;
     display: flex;
-    width:100%;
-    background-color:rgba(0,0,0,0.90);
-    color: white;
-    bottom: 105px; 
-}
-.text-in-footer,.text-in-footer1,.text-in-footer2{
-    display: flex;
-    flex-direction: column;
-    width:27%;
-    margin: 20px;
+	width:70%;
+	justify-content: space-between
 }
 
-.text-in-footer3{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    transition: 0.4s;
-}
-.text-in-footer3 span:hover{
-    transform: scale(1.4,1.4)
-}
-
-.text-in-footer1 a{
-    color:white;
-    text-decoration: none;
-    margin: 15px;
-    transition: 0.4s
-}
-.text-in-footer1 a:hover{
-    color:grey;
+.cards1,.cards2,.cards3{
+	display: flex;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	background-color: whitesmoke;
+	flex-direction: column;
+    width:30%;
+	margin: 30px;
+	padding: 40px;
+	box-shadow: 0 10px 30px rgba(0, 0,0, 0.3);
+	transition: 0.5s ease;
 }
 
-
-.footer1 {
-    display: flex;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: grey;
-    padding: 20px 0px;
-}
-
-#links{
-    padding:0 20px;
-    margin-top:3px;
-}
-#text1{
-    margin-right: auto;
-    padding:0 20px;
-    font-size:17px 
-}
-#text1 {
-    
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    padding: 0px 15px;
+.cards1:hover{
+	color: white;
+	background-color: #178297;
+	transition: 0.5s ease;
+	transform: scale(1.05,1.05);
+	box-shadow: 0 10px 30px rgba(0, 0,0, 0.8);
 
 }
+.cards3:hover{
+	color: white;
+	background-color: blueviolet;
+	transition: 0.5s ease;
+	transform: scale(1.05,1.05)
+}
+.cards2:hover{
+	color: white;
+	background-color: palevioletred;
+	transition: 0.5s ease;
+	transform: scale(1.05,1.05)
+}
+.cards1 a,.cards2 a, .cards3 a{
+	margin-top: 30px;
+	color: rgba(23, 45, 246, 0.801);
+	padding: 3px 6px;
+	margin-right: auto;
+	font-size: 18px;
+	transition: 0.5s ease;
+	text-decoration: underline;
+	
+}
+.cards1 h2,.cards2 h2, .cards3 h2{
+	font-size: 30px;
+}
 
-#links a{
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    padding: 0 15px;
-    transition: 0.4s;
+.cards1 p,.cards2 p, .cards3 p{
+	font-size: 18px;
 }
-#links a:hover{
-    color:grey
+
+.cards1 a:hover,.cards2 a:hover, .cards3 a:hover{
+	color:white;
 }
+
+
+
+
 
