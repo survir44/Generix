@@ -12,23 +12,40 @@
   <body>
     <div>
     <div id="some"></div>
-     <div class="main-content">
-      <div class="outer-content">
-        <img src="Assets/Images/imagesforslider/arrow-left.png" alt="Prev image" class="prev">
-        <div class="inner-content">
-            <img src="Assets/Images/imagesforslider/image1.jpg" class="active-img">
-            <img src="Assets/Images/imagesforslider/image2.jpg" >
-            <img src="Assets/Images/imagesforslider/image3.jpg">
-            <img src="Assets/Images/imagesforslider/image4.jpg" >
-        </div>
-        <img src="Assets/Images/imagesforslider/arrow-right.png" alt="Prev image" class="next">
-      </div>
+     <!-- <div id="slider">
+      <figure>
+          <img src="Assets/Images/imagesforslider/image1.jpg">
+          <img src="Assets/Images/imagesforslider/image2.jpg" >
+          <img src="Assets/Images/imagesforslider/image3.jpg">
+          <img src="Assets/Images/imagesforslider/image4.jpg" >
+      </figure>
 
+    </div> -->
+    <div class="container1">
+    <div class="container">
+      <div class="card">
+        <div class="cards1">
+            <h2>Order </h2>
+            <p>Place your orders here and get all details related to your placed orders</p>
+            <a href="error.html">Go to Orders section</a>
+        </div>
+        <div class="cards2">
+          <h2>FAQ</h2>
+          <p>Most of the frequently asked questions by our users has been listed here.Visit this section to get a general idea about our idea and how our website works</p>
+          <a href="faq.html">Go to FAQ section</a>
+        </div>
+        <div class="cards3">
+          <h2>Contact Us</h2>
+          <p>Got a question? We'd love to hear form you.Send us a message and we'll respond as soon as possible.</p>
+          <a href="contact.html">Go to Contact US section</a>
+        </div>
+      </div>
     </div>
+  </div>
     <div id="some1"></div>
   </div>
 </html>
-<script>
+<!-- <script>
 $(document).ready(function(){
   $('.next').on('click', function(){
     var currentImg = $('.active-img');
@@ -51,5 +68,11 @@ $(document).ready(function(){
   });
 });
 </script>
-
-
+ -->
+<script>
+  $(document).ready(function(){
+    $('.cards1').focusin(function(){
+      $(this).addClass('focus')
+    })
+  })
+</script>
