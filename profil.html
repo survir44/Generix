@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="Assets/Css/profil.css">
+    </head>
+    <body>
+        <div class="center">
+            <div class="box">
+                <button id="dashboard" class="dropbtn"><a style="text-decoration: none; color: white;" href="dashboard.html">Dashboard</a></button>
+            </div>
+            <div class="box">
+                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="profil.html">Profile</a></button>
+            </div>
+            <div class="box">
+                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="#">Order</a></button>
+            </div>
+            <div class="box">
+                <button class="dropbtn" onclick="logout()"><a style="text-decoration: none; color: white;">Logout</a></button>
+            </div>
+            <br><br><br><br><br>
+            <h2>Profile</h2>
+            <div class="cont" style="float:left">
+                    <div style="float:right; width:45%">
+                        <p>Username</p>
+                        <input type="text" name="username" value="100rabh_yadav98" readonly><br><br>
+                        <p>Gender</p>
+                        <input type="text" name="gender" value="Male" readonly><br><br>
+                        <p>Contact Number</p>
+                        <input type="text" name="number" value="9640278397" readonly><br><br>
+                    </div>
+                    <div style="float:left;width:45%">
+                        <p>Name</p>
+                        <input type="text" name="name" value="SAURABH KUMAR YADAV" readonly><br><br>
+                        <p>Date Of Birth</p>
+                        <input type="text" name="DOB" value="25-09-1998" readonly><br><br>
+                        <p>Email</p>
+                        <input type="text" name="email" value="survir44@gmail.com" readonly><br><br>
+                        <p>Address</p>
+                        <textarea rows="4" column="500" name="address" readonly style="background-color: lightgrey; width:100%">hello World</textarea><br><br>
+                        <button  onclick="window.location.href='dashboard.html'">Cancel</button>&nbsp; &nbsp; &nbsp;
+                        <button  onclick="window.location.href='dashboard.html'">Submit</button>&nbsp; &nbsp; &nbsp;
+                    </div>
+            </div>
+            <div class="cont" style="width:18%; float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="Assets/Images/pro.png" width="150px" height="150px"><br><br><br>
+                <input type="file" id="upload"  value="upload" onclick="upload()">
+            </div>
+        </div> 
+    </body>
+</html>
+<script>
+    function upload(){
+        alert("hello");
+        var xhr=new XMLHttpRequest();
+        var url="http://localhost:8080/pic";
+        xhr.open("POST",url);
+        xhr.setRequestHeader('Content-Type','application/json');
+        xhr.send(upload);
+        
+    }
+</script>
