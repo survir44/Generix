@@ -16,7 +16,7 @@
                 <button class="dropbtn"><a style="text-decoration: none; color: white;" href="#">Order</a></button>
             </div>
             <div class="box">
-                <button class="dropbtn" onclick="logout()"><a style="text-decoration: none; color: white;">Logout</a></button>
+                <button class="dropbtn"><a style="text-decoration: none; color: white;"href="index.html">Logout</a></button>
             </div>
             <br><br><br><br><br>
             <h2>Profile</h2>
@@ -44,19 +44,38 @@
             </div>
             <div class="cont" style="width:18%; float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <img src="Assets/Images/pro.png" width="150px" height="150px"><br><br><br>
-                <input type="file" id="upload"  value="upload" onclick="upload()">
+                <form action="http://localhost:8080/pic" enctype="multipart/form-data" method="POST">
+                    <input type="file" name="file">
+                </form>
+                
             </div>
         </div> 
     </body>
 </html>
 <script>
-    function upload(){
+   /*function upload(){
         alert("hello");
+       inputNode.value = fileInput.value.replace("C:\\fakepath\\", "");
+        //alert(inputNode);
+        var fil=document.getElementById("upload").value;
+        alert(fil);
         var xhr=new XMLHttpRequest();
         var url="http://localhost:8080/pic";
         xhr.open("POST",url);
-        xhr.setRequestHeader('Content-Type','application/json');
-        xhr.send(upload);
+        xhr.setRequestHeader('enctype','multipart/form-data');
+        xhr.send(JSON.stringify({"file":fil}));
+        //alert(file);
+        xhr.onload=function(){
+            if(this.status==200){
+                alert("Succesfully Uploaded");
+            }
+            else if(this.status==400){
+                alert("error");
+            }
+            else{
+                alert("Invalid Request");
+            }
+        }
         
-    }
+    }*/
 </script>
