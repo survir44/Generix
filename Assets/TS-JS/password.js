@@ -25,7 +25,7 @@ function submit(){
     else{
         var message;
         var xhr=new XMLHttpRequest();
-        url='http://localhost:8080/password';
+        url='http://localhost:8080/dashboard/password';
         xhr.open('POST',url);
         xhr.setRequestHeader('Content-Type','application/json')
         xhr.send(JSON.stringify({"user":user,"current":current,"confirm":confirm}));

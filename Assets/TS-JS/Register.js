@@ -36,6 +36,7 @@ var Info = /** @class */ (function () {
         document.getElementById('email').value = "";
         document.getElementById('pass').value = "";
         document.getElementById('conpass').value = "";
+        document.getElementById('fullname').value="";
     };
     return Info;
 }());

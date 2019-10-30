@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Profile</title>
-		<link rel="stylesheet" href="Assets/Css/profile.css">
-	</head>
-	
-	<body>
-		<div class= "contentScreen">
-			<div class = "column left">
-				<img src="sanket.jpg" width = "210px" height = "280px">
-			</div>
-			<div class = "column middle">
-				
-			</div>
-			<div class = "column right">
-				<div id = "name">Sanket Deshmukh</div>
-				<div id = "username">deshmukhsanket</div>
-				<!--<div id = "username">
-					<img src="location.png" width = "12px" height = "15px">
-					Bhandup(W), Mumbai - 400 078
-				</div>-->
-				<div id = "contacts"><B>Your Points: -</B></div>
-				<!-- #D3D3D3 -->
-				<div id = "points">1250</div>
-				<div id = "contacts"><B>Contact Details: -</B></div>
-				<div>
-					<div id = "details">Mobile No.: 9702717188</div>
-					<div id = "details">Address: 2, Jatadhari Chawl, New Sanjay Niwas,
-					Nrityanjali Marg, Bhandup(W.), Mumbai - 400 078</div>
-					<div id = "details">Email: meetsanket24@gmail.com</div>
-				</div><br>
-				<div id = "contacts"><B>Other Details: -</B></div>
-				<div>
-					<div id = "details">Date of Birth: 13/05/2000</div>
-					<div id = "details">Occupation: Worker</div>
-				</div>
-			</div>
-		</div>
-	</body>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="Assets/Css/profil.css">
+    </head>
+    <body>
+        <div id="some"></div>
+        <br><br>
+        <div class="center">
+            <div class="box">
+                <button id="dashboard" class="dropbtn"><a style="text-decoration: none; color: white;" href="dashboard.html">Dashboard</a></button>
+            </div>
+            <div class="box">
+                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="profile.html">Profile</a></button>
+            </div>
+            <div class="box">
+                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="error.html">Order</a></button>
+            </div>
+            <div class="box">
+                <button class="dropbtn"><a style="text-decoration: none; color: white;"href="index.html">Logout</a></button>
+            </div>
+            <br><br><br><br><br>
+            <h2>Profile</h2>
+            <div class="cont" style="float:left" >
+                    <div style="float:right; width:45%">
+                            <p>Username</p>
+                            <input type="text" id="username" readonly><br><br>
+                        <fieldset id="myfieldset1" style="border: none;"disabled>
+                        <p>Gender</p>
+                        <select id="gender">
+                            <option>Not selected</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <p>Contact Number</p>
+                        <input type="text" id="number"><br><br>
+                    </fieldset>
+                    </div>
+                    <div style="float:left;width:45%">
+                        <fieldset id="myfieldset2" style="border: none" disabled>
+                        <p>Name</p>
+                        <input type="text" id="name"><br><br>
+                        <p>Date Of Birth</p>
+                        <input type="date" id="DOB"><br><br>
+                        <p>Email</p>
+                        <input type="email" id="email" ><br><br>
+                        <p>Address</p>
+                        <textarea rows="4" column="500" id="address" style="background-color: lightgrey; width:100%"></textarea><br><br>
+                        </fieldset>
+                        <button  onclick="window.location.href='dashboard.html'">Cancel</button>&nbsp; &nbsp; &nbsp;
+                        <button  onclick="edit()">Edit</button>&nbsp; &nbsp; &nbsp;
+                        <button  onclick="submit()">Submit</button>&nbsp; &nbsp; &nbsp;
+                        
+                    </div>
+            </div>
+            <div class="cont" style="width:18%; float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="Assets/Images/pro.png" width="150px" height="150px"><br><br><br>
+                <form id="upload" action="http://localhost:8080/pic" enctype="multipart/form-data" method="POST">
+                    <input type="file" type="submit" name="file" onchange="upload()">
+                </form> 
+                
+            </div>
+        </div><br><br><br><br>
+        <div id="some1"></div>
+    </body>
 </html>
+<script src="Assets/TS-JS/profile.js"></script>
+<script src="Assets/TS-JS/JQuery.js"></script>
+<script src="Assets/TS-JS/imp.js"></script>
