@@ -10,11 +10,11 @@ document.getElementById('login__button').addEventListener('click', function () {
 });
 document.getElementById("register__button").addEventListener('click', function () {
     if (document.getElementById("register__button").innerHTML != "Register") {
+        location.href="dashboard.html"
     }
-    else
-        [
-            location.href = "register.html"
-        ];
+    else{
+        location.href = "register.html"
+    }
 });
 function someCookie(name) {
     document.getElementById('login__button').innerHTML = "Logout";
