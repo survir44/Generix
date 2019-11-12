@@ -20,4 +20,7 @@ document.getElementById('contact-button').addEventListener('click', function () 
             alert("Message has been sent");
         }
     }
+    document.getElementById('full-name').value="";
+    document.getElementById('contact-email').value="";
+    document.getElementById('query-box').value="";
 });

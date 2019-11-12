@@ -15,17 +15,19 @@
                 <button class="dropbtn"><a style="text-decoration: none; color: white;" href="profile.html">Profile</a></button>
             </div>
             <div class="box">
-                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="error.html">Order</a></button>
+                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="selling_products.html">Order</a></button>
             </div>
             <div class="box">
-                <button class="dropbtn"><a style="text-decoration: none; color: white;"href="index.html">Logout</a></button>
+                <button class="dropbtn"><a style="text-decoration: none; color: white;" href="contact.html">Feedback</a></button>
             </div>
             <br><br><br><br><br>
             <h2>Profile</h2>
             <div class="cont" style="float:left" >
                     <div style="float:right; width:45%">
-                            <p>Username</p>
+                        <p>Username</p>
+                        <fieldset id="myfieldset" style="border: none;"disabled>  
                             <input type="text" id="username" readonly><br><br>
+                        </fieldset>
                         <fieldset id="myfieldset1" style="border: none;"disabled>
                         <p>Gender</p>
                         <select id="gender">
@@ -55,7 +57,7 @@
                     </div>
             </div>
             <div class="cont" style="width:18%; float:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="Assets/Images/pro.png" width="150px" height="150px"><br><br><br>
+                <img src="Assets/Images/Photo.jpg" width="150px" height="150px"><br><br><br>
                 <form id="upload" action="http://localhost:8080/pic" enctype="multipart/form-data" method="POST">
                     <input type="file" type="submit" name="file" onchange="upload()">
                 </form> 

@@ -15,7 +15,9 @@ var Info = /** @class */ (function () {
             if (this.status == 200) {
                 message = JSON.parse(this.responseText);
                 getAlert(message.status, message.status.charAt(0).toUpperCase() + message.status.slice(1),message.message)
-                
+                setTimeout(function(){
+                    location="login.html"
+                },1500)
             }
             else if (this.status == 400) { 
                 message = JSON.parse(this.responseText);
@@ -79,18 +81,18 @@ function validate(name, email, pass, conpass, data) {
         getAlert("error","Error","Confirm password field is empty")
         return false;
     }
-    if (name.length < 5 || name.length > 12) {
-        getAlert("error","Error","The text in username field must have length between 5 to 12 characters")
+    if (name.length < 5 || name.length > 20) {
+        getAlert("error","Error","The text in username field must have length between 5 to 20 characters")
         data.emptyFields();
         return false;
     }
-    if (pass.length < 5 || pass.length > 12) {
-        getAlert("error","Error","The text in password field must have length between 5 to 12 characters")
+    if (pass.length < 5 || pass.length > 20) {
+        getAlert("error","Error","The text in password field must have length between 5 to 20 characters")
         data.emptyFields();
         return false;
     }
-    if (conpass.length < 5 || conpass.length > 12) {
-        getAlert("error","Error","The text in confirm-password field must have length between 5 to 12 characters")
+    if (conpass.length < 5 || conpass.length > 20) {
+        getAlert("error","Error","The text in confirm-password field must have length between 5 to 20 characters")
         data.emptyFields();
         return false;
     }

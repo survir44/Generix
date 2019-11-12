@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Sell Your Product</title>
+		<link rel="stylesheet" href="product.css">
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+		<script src="Assets/TS-JS/JQuery.js"></script>
+		<!--<script src="get_order.js"></script>
+		<script type="text/javascript">
+			//alert(document.getElementById("name").value);
+			var message;
+			var xhr = new XMLHttpRequest();
+			var url = "http://localhost:8080/product";
+			xhr.open("POST",url,true);
+			xhr.setRequestHeader('Content-Type','application/json');
+			//var s =document.getElementById("name").value;
+			//asd = {"name":s}
+			xhr.send(JSON.stringify({"UserName":"survir"}));
+			xhr.onload = function() {
+				if(this.status == 200) {
+					var ans = JSON.parse(this.responseText);
+					//alert(ans.FName);
+					//document.write(ans);
+					document.getElementById("fname").value = ans.FName;
+					document.getElementById("mname").value = ans.MName;
+					document.getElementById("lname").value = ans.LName;
+					document.getElementById("email").value = ans.Email;
+					document.getElementById("mobile").value = ans.contact;
+				}
+				else if(this.status == 400) {
+					message = alert(this.responseText);
+					document.write("123456");
+					alert(message.message);
+				}
+				else {
+					alert("incorrect request");
+				}
+			}
+		</script>-->
+	</head>
+	<body>
+		<div id = "abc">
+			<div id = "title1">Order Details</div>
+			<hr><br><br>
+			<table align="center" id="tab">
+				<tr>
+				<th>Medicine Name</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Cost</th>
+				</tr>
+				<!--<tr>
+				<td>Paracetamol</td>
+				<td>Rs. 50</td>
+				<td>30</td>
+				<td>Rs. 1500</td>
+				</tr>-->
+			</table>
+			<br>
+			<div id = "title1">Customer Details</div>
+			<hr><br><br>
+			<div>
+				<div id = "title2">Full Name</div>
+				<br>
+				<div>
+					<input type = "text" id = "fname" class = "name" disabled></input>
+				</div>
+				<br>
+				<div id = "title2">E-mail</div>
+				<br>
+				<div>
+					<input type = "email" id = "email" class = "email name" disabled></input>
+				</div>
+				<br>
+				<div id = "title2">Contact Number</div>
+				<br>
+				<div>
+					<input value = "+91" class = "india name" disabled></input>
+					<input id = "mobile" class = "email name" disabled></input>
+				</div>
+				<br>
+				<div id = "title2">Billing Address</div>
+				<br>
+				<div>
+					<input id = "street1" placeholder = "Street 1" type = "text" class = "w3-hover-gray street name"></input>
+				</div>
+				<br>
+				<div>
+					<input id = "street2" placeholder = "Street 2" type = "text" class = "w3-hover-gray street name"></input>
+				</div>
+				<br>
+				<div>
+					<input id = "city" placeholder = "City" type = "text" class = "w3-hover-gray city name"></input>
+					<input id = "pin" placeholder = "Pin Code" type = "text" class = "w3-hover-gray city name"></input>
+				</div>
+				<br>
+				<br>
+				<div id="but">
+					<input id="page" type="submit" value="Proceed" onClick="sam()"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="get_order.js"></script>
